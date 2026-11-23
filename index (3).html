@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zgro AI — We Replace Digital Marketing Agencies Using AI</title>
+  <meta name="description" content="Real Estate AI Growth System. Stop hiring slow digital marketing agencies. Replace them with your AI Digital Twin + 24/7 AI WhatsApp Lead Closer." />
+
+  <!-- Google Fonts: Inter & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            obsidian: '#05050a',
+            neonCyan: '#00f0ff',
+            electricPurple: '#8b5cf6',
+            neonEmerald: '#10b981',
+          },
+          animation: {
+            'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Base Dark Theme */
+    body {
+      background-color: #05050a;
+      color: #f8fafc;
+      overflow-x: hidden;
+    }
+
+    /* Subtle Futuristic Cyber Grid */
+    .cyber-grid {
+      background-size: 44px 44px;
+      background-image:
+        linear-gradient(to right, rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(139, 92, 246, 0.04) 1px, transparent 1px);
+    }
+
+    /* Glassmorphism Cards */
+    .glass-card {
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-card-glow {
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.82), rgba(5, 5, 10, 0.92));
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(0, 240, 255, 0.32);
+      box-shadow: 0 0 36px -12px rgba(0, 240, 255, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+
+    /* Gradient Headline Text */
+    .text-gradient {
+      background: linear-gradient(135deg, #ffffff 15%, #00f0ff 55%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Custom Neon Range Slider */
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 8px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.12);
+      outline: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #00f0ff;
+      border: 3px solid #05050a;
+      box-shadow: 0 0 16px rgba(0, 240, 255, 0.9);
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    input[type="range"]::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #00f0ff;
+      border: 3px solid #05050a;
+      box-shadow: 0 0 16px rgba(0, 240, 255, 0.9);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-neonCyan/30 selection:text-neonCyan relative">
+
+  <!-- Ambient Futuristic Background -->
+  <div class="fixed inset-0 cyber-grid pointer-events-none z-0"></div>
+  <div class="fixed -top-28 -left-28 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px] rounded-full bg-neonCyan/10 blur-[130px] pointer-events-none animate-pulse-slow z-0"></div>
+  <div class="fixed bottom-10 -right-24 w-[380px] h-[380px] sm:w-[540px] sm:h-[540px] rounded-full bg-electricPurple/15 blur-[140px] pointer-events-none animate-pulse-slow z-0"></div>
+
+  <!-- =========================================================
+       1. STICKY NAVBAR
+  ========================================================== -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-obsidian/80 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <!-- Glowing Zgro AI Logo -->
+        <a href="#" class="flex items-center gap-2.5 group">
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neonCyan opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-neonCyan shadow-[0_0_14px_#00f0ff]"></span>
+          </span>
+          <span class="font-display font-bold text-2xl tracking-wider text-white drop-shadow-[0_0_12px_rgba(0,240,255,0.35)]">
+            Zgro <span class="text-neonCyan">AI</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="#comparison" class="hover:text-neonCyan transition-colors">Old Way vs Zgro AI</a>
+          <a href="#system" class="hover:text-neonCyan transition-colors">3-Step System</a>
+          <a href="#calculator" class="hover:text-neonCyan transition-colors">Savings Calculator</a>
+        </nav>
+
+        <!-- Glowing CTA Button -->
+        <a href="#lead-form"
+           class="inline-flex items-center justify-center px-4 py-2.5 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-display font-bold text-obsidian bg-neonCyan rounded-xl shadow-[0_0_22px_rgba(0,240,255,0.45)] hover:shadow-[0_0_34px_rgba(0,240,255,0.85)] hover:bg-white transition-all duration-200">
+          Book Free AI Demo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+
+    <!-- =========================================================
+         2. HERO SECTION
+    ========================================================== -->
+    <section class="pt-12 pb-16 sm:pt-20 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neonCyan/10 border border-neonCyan/30 text-neonCyan text-xs sm:text-sm font-display font-semibold tracking-widest uppercase mb-6 shadow-[0_0_20px_rgba(0,240,255,0.15)]">
+        <span class="w-2 h-2 rounded-full bg-neonEmerald animate-pulse"></span>
+        REAL ESTATE AI GROWTH SYSTEM
+      </div>
+
+      <!-- Bold Headline -->
+      <h1 class="font-display font-bold text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.08] max-w-5xl mx-auto text-gradient mb-6">
+        Stop Hiring Slow Digital Marketing Agencies. Replace Them With AI.
+      </h1>
+
+      <!-- Sub-headline -->
+      <p class="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-9">
+        Built for Indian Real Estate builders, developers &amp; brokers. Publish <span class="text-neonCyan font-semibold">30+ AI Digital Twin reels/month</span> with zero camera shoots, and convert every inquiry with our <span class="text-emerald-400 font-semibold">24/7 AI WhatsApp Lead Closer</span>.
+      </p>
+
+      <!-- Primary CTA Button -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+        <a href="#lead-form"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-neonCyan via-cyan-300 to-electricPurple text-obsidian font-display font-bold text-base sm:text-lg shadow-[0_0_35px_rgba(0,240,255,0.4)] hover:scale-[1.02] hover:shadow-[0_0_48px_rgba(139,92,246,0.65)] transition-all duration-200">
+          Deploy Zgro AI Now
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+        <a href="#calculator"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl glass-card text-white font-display font-semibold text-base sm:text-lg hover:border-neonCyan/50 hover:bg-white/5 transition-all duration-200">
+          Calculate Your Savings
+        </a>
+      </div>
+
+      <!-- Trust Metrics -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
+        <div class="glass-card rounded-2xl p-5 sm:p-6 hover:border-neonEmerald/50 transition-all">
+          <div class="font-display font-bold text-2xl sm:text-3xl text-emerald-400">24/7 AI Closer</div>
+          <div class="text-xs sm:text-sm text-slate-400 mt-1">Instant WhatsApp qualification &amp; site visit booking</div>
+        </div>
+        <div class="glass-card rounded-2xl p-5 sm:p-6 hover:border-neonCyan/50 transition-all">
+          <div class="font-display font-bold text-2xl sm:text-3xl text-neonCyan">0 Hours Filming</div>
+          <div class="text-xs sm:text-sm text-slate-400 mt-1">Your AI Digital Twin shoots every reel for you</div>
+        </div>
+        <div class="glass-card rounded-2xl p-5 sm:p-6 hover:border-electricPurple/50 transition-all">
+          <div class="font-display font-bold text-2xl sm:text-3xl text-purple-400">10x Faster Execution</div>
+          <div class="text-xs sm:text-sm text-slate-400 mt-1">No agency excuses, delays, or editing bottlenecks</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. COMPARISON SECTION: OLD WAY VS ZGRO AI
+    ========================================================== -->
+    <section id="comparison" class="py-14 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-neonCyan font-display text-xs sm:text-sm font-semibold tracking-widest uppercase">Why Agencies Are Obsolete</span>
+        <h2 class="font-display font-bold text-3xl sm:text-5xl text-white mt-2">
+          Old Way vs. <span class="text-gradient">Zgro AI</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <!-- Traditional Agencies -->
+        <div class="rounded-3xl p-7 sm:p-9 bg-red-950/15 border border-red-500/25 backdrop-blur-md">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-red-400">Old Way</span>
+              <h3 class="font-display font-bold text-2xl text-slate-100 mt-1">Traditional Agencies</h3>
+            </div>
+            <div class="w-11 h-11 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+          </div>
+
+          <ul class="space-y-4 text-slate-300 text-sm sm:text-base">
+            <li class="flex items-start gap-3">
+              <span class="text-red-400 font-bold mt-0.5">✕</span>
+              <span><strong class="text-white">₹40k–₹1L/mo retainers</strong> with zero guarantee of qualified property buyers.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-400 font-bold mt-0.5">✕</span>
+              <span><strong class="text-white">Endless camera shoots</strong> eating up your valuable site-visit and closing hours.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-400 font-bold mt-0.5">✕</span>
+              <span><strong class="text-white">Slow edits &amp; revisions</strong> taking 5–7 days just to post one basic reel.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-400 font-bold mt-0.5">✕</span>
+              <span><strong class="text-white">Cold leads in Excel sheets</strong> that never pick up because nobody followed up in time.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Zgro AI -->
+        <div class="rounded-3xl p-7 sm:p-9 glass-card-glow relative overflow-hidden">
+          <div class="absolute -top-10 -right-10 w-44 h-44 bg-neonCyan/15 blur-3xl pointer-events-none"></div>
+          <div class="flex items-center justify-between mb-6 relative z-10">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">New AI Standard</span>
+              <h3 class="font-display font-bold text-2xl text-white mt-1">Zgro AI System</h3>
+            </div>
+            <div class="w-11 h-11 rounded-2xl bg-emerald-500/15 border border-emerald-400/40 flex items-center justify-center text-emerald-400 shadow-[0_0_16px_rgba(16,185,129,0.3)]">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+          </div>
+
+          <ul class="space-y-4 text-slate-200 text-sm sm:text-base relative z-10">
+            <li class="flex items-start gap-3">
+              <span class="text-emerald-400 font-bold mt-0.5">✓</span>
+              <span><strong class="text-white">Custom AI Digital Twin</strong> that looks and speaks just like you on video.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-emerald-400 font-bold mt-0.5">✓</span>
+              <span><strong class="text-white">30+ high-retention reels/month</strong> generated and edited without ever filming.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-emerald-400 font-bold mt-0.5">✓</span>
+              <span><strong class="text-white">5-second WhatsApp AI qualification</strong> filtering buyer budget, BHK &amp; location 24/7.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-emerald-400 font-bold mt-0.5">✓</span>
+              <span><strong class="text-white">Automated site visit booking</strong> directly into your calendar at a fraction of agency cost.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. 3-STEP "AGENCY REPLACEMENT" SYSTEM
+    ========================================================== -->
+    <section id="system" class="py-14 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <span class="text-purple-400 font-display text-xs sm:text-sm font-semibold tracking-widest uppercase">How It Works</span>
+        <h2 class="font-display font-bold text-3xl sm:text-5xl text-white mt-2">
+          3-Step <span class="text-gradient">Agency Replacement</span> System
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Step 1 -->
+        <div class="glass-card rounded-3xl p-7 sm:p-8 hover:border-neonCyan/50 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="px-3 py-1 rounded-lg bg-neonCyan/10 border border-neonCyan/30 text-neonCyan font-mono text-xs font-bold">STEP 01</span>
+              <svg class="w-7 h-7 text-neonCyan" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-white mb-3">AI Digital Twin Cloning</h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              We clone your face, voice, and expressions once. From that day forward, you never need to book a studio or stand in front of a camera again.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 text-xs text-neonCyan font-semibold">
+            Replaces: Videographer &amp; Shoot Days
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card-glow rounded-3xl p-7 sm:p-8 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="px-3 py-1 rounded-lg bg-electricPurple/20 border border-electricPurple/40 text-purple-300 font-mono text-xs font-bold">STEP 02</span>
+              <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h1.5C5.496 19.5 6 18.996 6 18.375m-3.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-1.5A1.125 1.125 0 0118 18.375M20.625 4.5H3.375m17.25 0c.621 0 1.125.504 1.125 1.125M20.625 4.5h-1.5C18.504 4.5 18 5.004 18 5.625m3.75 0v1.5c0 .621-.504 1.125-1.125 1.125M3.375 4.5c-.621 0-1.125.504-1.125 1.125M3.375 4.5h1.5C5.496 4.5 6 5.004 6 5.625m-3.75 0v1.5c0 .621.504 1.125 1.125 1.125" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-white mb-3">Automated High-Retention Content &amp; Ads</h3>
+            <p class="text-slate-200 text-sm sm:text-base leading-relaxed">
+              Our AI pipeline scripts, generates, and edits 30+ viral property reels and high-converting Meta/Instagram video ads tailored for Indian buyers.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 text-xs text-purple-300 font-semibold">
+            Replaces: Scriptwriters, Editors &amp; Media Buyers
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card rounded-3xl p-7 sm:p-8 hover:border-neonEmerald/50 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="px-3 py-1 rounded-lg bg-emerald-500/15 border border-emerald-400/30 text-emerald-400 font-mono text-xs font-bold">STEP 03</span>
+              <svg class="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+              </svg>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-white mb-3">24/7 WhatsApp &amp; DM AI Closer</h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Every comment, DM, and ad lead gets an instant 5-second AI reply on WhatsApp — qualifying budget, preferred location, and booking site visits automatically.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 text-xs text-emerald-400 font-semibold">
+            Replaces: Telecallers &amp; Manual Follow-ups
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. INTERACTIVE AGENCY COST SAVINGS CALCULATOR
+    ========================================================== -->
+    <section id="calculator" class="py-14 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <div class="glass-card-glow rounded-3xl p-6 sm:p-10 lg:p-12">
+        <div class="text-center mb-10">
+          <span class="text-neonCyan font-display text-xs sm:text-sm font-semibold tracking-widest uppercase">ROI Estimator</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2">
+            Agency Cost &amp; Time Savings Calculator
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2">
+            Slide your current monthly agency retainer to see how much money and filming time you save every year with Zgro AI.
+          </p>
+        </div>
+
+        <div class="space-y-8">
+          <!-- Slider Control -->
+          <div class="max-w-2xl mx-auto">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+              <label for="retainerSlider" class="text-sm sm:text-base font-medium text-slate-300">
+                Your Current Monthly Agency Retainer
+              </label>
+              <span id="retainerValue" class="font-display font-bold text-2xl sm:text-3xl text-neonCyan">
+                ₹60,000 / mo
+              </span>
+            </div>
+            <input id="retainerSlider" type="range" min="20000" max="150000" step="5000" value="60000" />
+            <div class="flex justify-between text-xs text-slate-500 mt-2 font-mono">
+              <span>₹20,000</span>
+              <span>₹85,000</span>
+              <span>₹1,50,000</span>
+            </div>
+          </div>
+
+          <!-- Dynamic Output Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-2">
+            <div class="rounded-2xl bg-obsidian/85 border border-neonCyan/30 p-6 text-center">
+              <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Money Saved Per Year</div>
+              <div id="annualMoneySaved" class="font-display font-bold text-4xl sm:text-5xl text-gradient mt-2">
+                ₹4,32,000
+              </div>
+              <div class="text-xs text-neonCyan/80 mt-2">~60% average cost reduction vs traditional agencies</div>
+            </div>
+
+            <div class="rounded-2xl bg-obsidian/85 border border-emerald-400/30 p-6 text-center">
+              <div class="text-xs uppercase tracking-wider text-slate-400 font-semibold">Filming Hours Saved Per Year</div>
+              <div id="annualHoursSaved" class="font-display font-bold text-4xl sm:text-5xl text-emerald-400 mt-2">
+                192 Hours
+              </div>
+              <div class="text-xs text-slate-400 mt-2">0 camera shoots — 100% handled by your AI Digital Twin</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. LEAD CAPTURE FORM SECTION
+    ========================================================== -->
+    <section id="lead-form" class="py-14 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+      <div class="glass-card-glow rounded-3xl p-7 sm:p-10 relative overflow-hidden">
+        <!-- Form Container -->
+        <div id="formContainer">
+          <div class="text-center mb-8">
+            <span class="inline-block px-3.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/35 text-emerald-400 text-xs font-display font-semibold uppercase tracking-wider mb-3">
+              Free 15-Min Live AI Demo
+            </span>
+            <h2 class="font-display font-bold text-3xl sm:text-4xl text-white">
+              Deploy Zgro AI In Your Real Estate Business
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base mt-2">
+              Fill in your details below to get your custom AI Digital Twin &amp; WhatsApp Closer roadmap.
+            </p>
+          </div>
+
+          <form id="zgroLeadForm" class="space-y-5">
+            <!-- Full Name -->
+            <div>
+              <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                Full Name *
+              </label>
+              <input type="text" id="name" name="name" required placeholder="e.g., Rajesh Sharma"
+                class="w-full px-4 py-3.5 rounded-xl bg-obsidian/90 border border-white/15 text-white placeholder-slate-500 focus:outline-none focus:border-neonCyan focus:ring-1 focus:ring-neonCyan transition-all" />
+            </div>
+
+            <!-- WhatsApp Number -->
+            <div>
+              <label for="phone" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                WhatsApp Number *
+              </label>
+              <input type="tel" id="phone" name="phone" required placeholder="e.g., 9876543210"
+                class="w-full px-4 py-3.5 rounded-xl bg-obsidian/90 border border-white/15 text-white placeholder-slate-500 focus:outline-none focus:border-neonCyan focus:ring-1 focus:ring-neonCyan transition-all" />
+            </div>
+
+            <!-- Business / Agency Name -->
+            <div>
+              <label for="business" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                Business / Agency Name *
+              </label>
+              <input type="text" id="business" name="business" required placeholder="e.g., Royal Estates / Apex Developers"
+                class="w-full px-4 py-3.5 rounded-xl bg-obsidian/90 border border-white/15 text-white placeholder-slate-500 focus:outline-none focus:border-neonCyan focus:ring-1 focus:ring-neonCyan transition-all" />
+            </div>
+
+            <!-- Monthly Marketing Budget -->
+            <div>
+              <label for="budget" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">
+                Monthly Marketing Budget *
+              </label>
+              <select id="budget" name="budget" required
+                class="w-full px-4 py-3.5 rounded-xl bg-obsidian/95 border border-white/15 text-white focus:outline-none focus:border-neonCyan focus:ring-1 focus:ring-neonCyan transition-all">
+                <option value="" disabled selected>Select your monthly budget</option>
+                <option value="₹25,000 - ₹50,000">₹25,000 - ₹50,000</option>
+                <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
+                <option value="₹1,00,000+">₹1,00,000+</option>
+                <option value="Just Starting Out">Just Starting Out</option>
+              </select>
+            </div>
+
+            <!-- Inline Error Box -->
+            <div id="formError" class="hidden rounded-xl bg-red-500/15 border border-red-500/40 px-4 py-3 text-sm text-red-300"></div>
+
+            <!-- Submit Button with Loading Spinner -->
+            <button type="submit" id="submitBtn"
+              class="w-full py-4 rounded-2xl bg-gradient-to-r from-neonCyan via-cyan-300 to-electricPurple text-obsidian font-display font-bold text-lg shadow-[0_0_30px_rgba(0,240,255,0.4)] hover:shadow-[0_0_45px_rgba(0,240,255,0.7)] hover:scale-[1.01] transition-all duration-200 flex items-center justify-center gap-2.5 disabled:opacity-70 disabled:cursor-not-allowed">
+              <svg id="loadingSpinner" class="hidden animate-spin h-5 w-5 text-obsidian" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+              </svg>
+              <span id="submitBtnText">Get My AI Growth System →</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Clean Success State (Hidden Initially) -->
+        <div id="successState" class="hidden text-center py-6 space-y-5">
+          <div class="w-16 h-16 mx-auto rounded-full bg-emerald-500/15 border border-emerald-400/50 flex items-center justify-center text-emerald-400 shadow-[0_0_28px_rgba(16,185,129,0.45)]">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-emerald-400">Lead Saved Successfully</span>
+            <h3 class="font-display font-bold text-3xl text-white mt-1">Redirecting to WhatsApp...</h3>
+            <p id="successSubtext" class="text-slate-300 text-sm sm:text-base mt-2 max-w-md mx-auto">
+              Your details are saved. If WhatsApp does not open automatically, click the button below.
+            </p>
+          </div>
+          <a id="fallbackWhatsappLink" href="#" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-[#25D366] text-obsidian font-display font-bold text-base sm:text-lg shadow-[0_0_25px_rgba(37,211,102,0.45)] hover:scale-[1.02] transition-all">
+            Open WhatsApp Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="relative z-10 border-t border-white/10 py-8 px-4 text-center">
+    <p class="font-display text-sm text-slate-400 tracking-wide">
+      <span class="text-white font-bold">Zgro AI</span> — We Replace Digital Marketing Agencies Using AI.
+    </p>
+  </footer>
+
+  <!-- =========================================================
+       7. FLOATING WHATSAPP BUTTON
+  ========================================================== -->
+  <a href="https://wa.me/918824123937?text=Hi%20Zgro%20AI%2C%20I%20want%20to%20replace%20my%20marketing%20agency%20using%20AI."
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Chat with Zgro AI on WhatsApp"
+     class="fixed bottom-5 right-5 z-50 flex items-center gap-2.5 px-4 py-3.5 rounded-full bg-[#25D366] text-obsidian font-display font-bold text-sm shadow-[0_0_28px_rgba(37,211,102,0.55)] hover:scale-105 transition-transform">
+    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+      <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.766.469 3.484 1.344 5l-1.406 5.156 5.281-1.375c1.469.797 3.109 1.219 4.75 1.219 5.516 0 9.969-4.453 9.969-9.969S17.547 2 12.031 2zm5.813 14.125c-.25.703-1.438 1.344-2 1.422-.516.078-1.188.109-1.922-.125-.453-.141-1.031-.344-1.766-.656-3.094-1.344-5.109-4.469-5.266-4.672-.156-.203-1.266-1.688-1.266-3.219s.797-2.281 1.078-2.594c.281-.313.625-.391.828-.391.203 0 .406.016.594.016.188 0 .453-.078.703.531.25.609.859 2.109.938 2.266.078.156.125.344.016.547-.109.203-.156.344-.313.516-.156.172-.328.391-.469.516-.156.156-.328.328-.141.641.188.313.844 1.391 1.813 2.25 1.25 1.109 2.297 1.453 2.609 1.609.313.156.5.141.688-.078.188-.219.797-.922 1.016-1.234.219-.313.438-.266.734-.156.297.109 1.891.891 2.219 1.047.328.156.547.234.625.375.078.141.078.813-.172 1.516z"/>
+    </svg>
+    <span class="hidden sm:inline">WhatsApp Us</span>
+  </a>
+
+  <!-- =========================================================
+       JAVASCRIPT: CALCULATOR + GOOGLE SHEETS + WHATSAPP
+  ========================================================== -->
+  <script>
+    // Critical Technical Configurations
+    const ZGRO_WHATSAPP_NUMBER = "918824123937";
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwuMzaKnH4Vy79_Zg5vhv1AV2V9i7Y6GmMAM9rIt1xl5G0QAAkNLe7VX8bctqY-065LKw/exec";
+
+    // Helper: Format INR currency (e.g., ₹4,32,000)
+    function formatINR(num) {
+      return "₹" + Math.round(num).toLocaleString("en-IN");
+    }
+
+    // ---------------------------------------------------------
+    // 1. INTERACTIVE AGENCY COST SAVINGS CALCULATOR
+    // ---------------------------------------------------------
+    const retainerSlider = document.getElementById("retainerSlider");
+    const retainerValue = document.getElementById("retainerValue");
+    const annualMoneySaved = document.getElementById("annualMoneySaved");
+    const annualHoursSaved = document.getElementById("annualHoursSaved");
+
+    function updateSavingsCalculator() {
+      const monthlyRetainer = parseInt(retainerSlider.value, 10);
+      // Estimate 60% annual agency retainer savings with Zgro AI
+      const yearlyMoney = monthlyRetainer * 12 * 0.60;
+      // Estimate filming hours saved per year (scales from ~120 hrs to ~360 hrs based on content volume)
+      const monthlyFilmingHours = Math.round(10 + ((monthlyRetainer - 20000) / 130000) * 18);
+      const yearlyHours = monthlyFilmingHours * 12;
+
+      retainerValue.textContent = `${formatINR(monthlyRetainer)} / mo`;
+      annualMoneySaved.textContent = formatINR(yearlyMoney);
+      annualHoursSaved.textContent = `${yearlyHours} Hours`;
+    }
+
+    retainerSlider.addEventListener("input", updateSavingsCalculator);
+    updateSavingsCalculator();
+
+    // ---------------------------------------------------------
+    // 2. LEAD FORM SUBMISSION -> GOOGLE SHEETS + WHATSAPP
+    // ---------------------------------------------------------
+    const leadForm = document.getElementById("zgroLeadForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const submitBtnText = document.getElementById("submitBtnText");
+    const loadingSpinner = document.getElementById("loadingSpinner");
+    const formError = document.getElementById("formError");
+    const formContainer = document.getElementById("formContainer");
+    const successState = document.getElementById("successState");
+    const successSubtext = document.getElementById("successSubtext");
+    const fallbackWhatsappLink = document.getElementById("fallbackWhatsappLink");
+
+    leadForm.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      formError.classList.add("hidden");
+
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const business = document.getElementById("business").value.trim();
+      const budget = document.getElementById("budget").value;
+
+      if (!name || !phone || !business || !budget) {
+        formError.textContent = "Please fill in all required fields.";
+        formError.classList.remove("hidden");
+        return;
+      }
+
+      // Show loading spinner state
+      submitBtn.disabled = true;
+      loadingSpinner.classList.remove("hidden");
+      submitBtnText.textContent = "Saving & Connecting to WhatsApp...";
+
+      // Build pre-filled WhatsApp redirect URL
+      const prefilledMessage =
+        `Hi Zgro AI! I want to replace my marketing agency using AI.%0A%0A` +
+        `*Name:* ${encodeURIComponent(name)}%0A` +
+        `*WhatsApp:* ${encodeURIComponent(phone)}%0A` +
+        `*Business:* ${encodeURIComponent(business)}%0A` +
+        `*Monthly Budget:* ${encodeURIComponent(budget)}`;
+
+      const whatsappUrl = `https://wa.me/${ZGRO_WHATSAPP_NUMBER}?text=${prefilledMessage}`;
+      fallbackWhatsappLink.href = whatsappUrl;
+
+      try {
+        // CORS-free POST request to Google Apps Script (guaranteed delivery before redirect)
+        await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8",
+          },
+          body: JSON.stringify({ name, phone, business, budget }),
+        });
+      } catch (err) {
+        console.error("Google Sheets sync error:", err);
+      } finally {
+        // Show clean success UI and open WhatsApp
+        successSubtext.textContent = `Thanks ${name}! Your details have been saved. Connecting you with Zgro AI on WhatsApp now...`;
+        formContainer.classList.add("hidden");
+        successState.classList.remove("hidden");
+
+        setTimeout(() => {
+          window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+        }, 600);
+      }
+    });
+  </script>
+</body>
+</html>
